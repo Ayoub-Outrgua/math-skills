@@ -5,15 +5,16 @@ import (
 	"strconv"
 )
 
-func Average(slice []string) float64 {
-	var sum float64 = 0
+func Variance(slice []string) float64 {
+	var sum float64
 	for _, v := range slice {
 		nb, err := strconv.Atoi(string(v))
 		if err != nil {
-			fmt.Println("the file has non valid number;", err)
+			fmt.Println("the file has invalid number:", err)
 			return 0
 		}
-		sum += float64(nb)
+		number := (float64(nb) - Average(slice))
+		sum += (number * number)
 	}
 	return sum / float64(len(slice))
 }
