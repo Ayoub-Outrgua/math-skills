@@ -7,21 +7,21 @@ import (
 )
 
 func Median(slice []string) float64 {
-	intSlice := []int{}
+	valuesSlice := []float64{}
 	for _, v := range slice {
 		nb, err := strconv.Atoi(string(v))
 		if err != nil {
 			fmt.Println("the file has non valid number:", err)
 			return 0
 		}
-		intSlice = append(intSlice, nb)
+		valuesSlice = append(valuesSlice, float64(nb))
 	}
-	sort.Ints(intSlice)
-	if len(intSlice)%2 != 0 {
-		return float64(intSlice[len(intSlice)/2])
+	sort.Float64s(valuesSlice)
+	if len(valuesSlice)%2 != 0 {
+		return valuesSlice[len(valuesSlice)/2]
 	} else {
-		var firstNumber float64 = float64(intSlice[(len(intSlice)/2)-1])
-		var secendNumber float64 = float64(intSlice[len(intSlice)/2])
+		var firstNumber float64 = valuesSlice[(len(valuesSlice)/2)-1]
+		var secendNumber float64 = valuesSlice[len(valuesSlice)/2]
 		return (firstNumber + secendNumber) / 2
 	}
 }

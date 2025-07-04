@@ -24,8 +24,8 @@ func main() {
 		fmt.Println("Error:", err)
 		return
 	}
-	slice := strings.Split(string(fileData), "\n")
-	// slice := strings.Fields(string(fileData))
+	// slice := strings.Split(string(fileData), "\n")
+	slice := strings.Fields(string(fileData))
 	if len(slice) == 0 {
 		fmt.Println("the file is empty!")
 		return
