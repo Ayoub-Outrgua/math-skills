@@ -24,7 +24,6 @@ func main() {
 		fmt.Println("Error:", err)
 		return
 	}
-	// slice := strings.Split(string(fileData), "\n")
 	slice := strings.Fields(string(fileData))
 	if len(slice) == 0 {
 		fmt.Println("the file is empty!")
@@ -35,8 +34,8 @@ func main() {
 	variance := math.Round(functions.Variance(slice))
 	standardDeviation := math.Round(functions.StandardDeviation(variance))
 
-	fmt.Println("Average : ", average)
-	fmt.Println("Median : ", median)
-	fmt.Println("Variance : ", variance)
-	fmt.Println("Standard Deviation : ", standardDeviation)
+	fmt.Printf("Average : %0.f\n", average)
+	fmt.Printf("Median : %0.f\n", median)
+	fmt.Printf("Variance : %0.f\n", variance)
+	fmt.Printf("Standard Deviation : %0.f\n", standardDeviation)
 }
