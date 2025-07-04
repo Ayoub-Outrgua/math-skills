@@ -16,7 +16,7 @@ func main() {
 	}
 	fileName := os.Args[1]
 	if !strings.HasSuffix(fileName, ".txt") || len(fileName) < 5 {
-		fmt.Println("Error: the file is not exist!")
+		fmt.Println("Error: the file is not exis!")
 		return
 	}
 	fileData, err := os.ReadFile(fileName)
