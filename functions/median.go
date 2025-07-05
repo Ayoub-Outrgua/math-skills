@@ -6,6 +6,7 @@ import (
 	"strconv"
 )
 
+// This function is used to calculate the median from a slice of string numbers
 func Median(slice []string) float64 {
 	valuesSlice := []float64{}
 	for _, v := range slice {

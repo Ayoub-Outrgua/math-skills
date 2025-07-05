@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// This function is used to calculate the variance from a slice of string numbers
 func Variance(slice []string) float64 {
 	var sum float64
 	for _, v := range slice {

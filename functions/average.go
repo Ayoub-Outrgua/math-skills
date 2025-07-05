@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// This function is used to calculate the average from a slice of string numbers
 func Average(slice []string) float64 {
 	var sum float64 = 0
 	for _, v := range slice {
